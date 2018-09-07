@@ -2,7 +2,7 @@
 
 # About GhostMigration  
 
-Make [Rails ActiveRecord migrations](https://edgeguides.rubyonrails.org/active_record_migrations.html) support zero downtime transformations on large tables, via Github's [gh-ost tool](https://github.com/github/gh-ost).
+GhostMigrations makes [Rails ActiveRecord migrations](https://edgeguides.rubyonrails.org/active_record_migrations.html) support zero downtime transformations on large tables, building on Github's [gh-ost tool](https://github.com/github/gh-ost).
 
 Why do we need this? Because Ghost is arguably more powerful than previous zero-downtime tools (e.g. wrappers for Percona online-schema-change or Large Hadron Migrator). Ghost rebuilds the table just like other tools, but  diverges in its methodology for converging it to synced-up state. Traditional replication tools rely on triggers. Ghost relies on binary logs, which has many advantages in terms of stability and features the tool can offer. [Read more about Ghost's triggerless migrations](https://github.com/github/gh-ost/blob/master/doc/triggerless-design.md). 
 
